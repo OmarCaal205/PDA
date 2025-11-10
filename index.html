@@ -65,7 +65,7 @@
     
     <div class="input-area">
       <label for="cadena">Ingrese una cadena:</label>
-      <input type="text" id="cadena" placeholder="ej: aabxycca" />
+      <input type="text" id="cadena" placeholder="ej: aabbxyccaa" />
       <button id="btnSimular" onclick="simularPDA()">Simular</button>
       <button id="btnPausa" style="display:none;" onclick="pausarReanudar()">Pausar</button>
       <button id="btnLimpiar" style="display:none;" onclick="limpiarSimulador()">Limpiar</button>
@@ -82,7 +82,6 @@
 
   <hr />
 
-  <!-- SECCIÓN FORMAL LIMPIA SIN ICONOS -->
   <section id="formal" aria-labelledby="heading-formal" role="region" style="padding:30px;">
     <h2 id="heading-formal">Descripción Formal del Autómata – Ejercicio #3</h2>
 
@@ -125,23 +124,21 @@ F  = { q₄ }
 
     <h3>Evaluación de Cadena Aceptada (DI)</h3>
 
-    <p>Cadena: aabxycca</p>
+    <p>Cadena: aabbxyccaa</p>
 
 <pre style="text-align:left; background:#e8fbe8; padding:15px; border-radius:8px;">
-(q₀, aabxycca, Z)
-(q₀, abxycca, AZ)
-(q₀, bxycca, AAZ)
+(q₀, aabbxyccaa, Z)
+(q₀, abbxyccaa, AZ)
+(q₀, bbxyccaa, AAZ)
 
-(q₁, xycca, AABZ)
-(q₁, ycca, AABBZ)
+(q₁, bxyccaa, AAABZ)
+(q₁, xyccaa, AAABBZ)
+(q₂, yccaa, AAABBZ)
+(q₂, ccaa, AAABBZ)
+(q₂, caa, AABBZ)
 
-(q₂, cca, AABBZ)
-(q₂, ca, AABBZ)
-(q₂, a, AABZ)
-
-(q₃, a, ABZ)
-(q₃, λ, AZ)
-
+(q₃, aa, AAZ)
+(q₄, a, AZ)
 (q₄, λ, Z)
 Cadena aceptada
 </pre>
@@ -172,7 +169,6 @@ Cadena rechazada
       y manteniendo la estructura requerida. Las descripciones instantáneas
       permiten verificar manualmente su funcionamiento.
     </p>
-
   </section>
 
   <hr />
@@ -257,6 +253,32 @@ Cadena rechazada
         </defs>
 
       </svg>
+    </div>
+  </section>
+
+  <hr />
+
+  <section id="material" aria-labelledby="heading-material" role="region">
+    <h2 id="heading-material">Material Complementario</h2>
+    <p>
+      En esta sección se incluyen los enlaces al <strong>video explicativo</strong> del funcionamiento de la página web
+      y al <strong>informe en PDF</strong> correspondiente al proyecto final.
+    </p>
+
+    <div style="margin-top:20px;">
+      <p>
+        🎥 <strong>Video explicativo:</strong><br>
+        <a href="https://drive.google.com/drive/folders/1_mzRNl2JVhVf-nmHn5smVx4ohtklj95e?usp=sharing" target="_blank" style="color:#004aad; font-weight:bold;">
+          Ver video en Google Drive
+        </a>
+      </p>
+
+      <p>
+        📄 <strong>Informe del proyecto:</strong><br>
+        <a href="https://drive.google.com/drive/folders/1_mzRNl2JVhVf-nmHn5smVx4ohtklj95e?usp=sharing" target="_blank" style="color:#004aad; font-weight:bold;">
+          Descargar informe en PDF
+        </a>
+      </p>
     </div>
   </section>
 
